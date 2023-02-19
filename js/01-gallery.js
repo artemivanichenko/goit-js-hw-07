@@ -11,9 +11,9 @@ function createGalleryForms(galleryItems) {
     .map(({ preview, description, original }) => {
       return `
         <div class="gallery__item">
-        <a class="gallery__link" href="${original}">
+        <a class="gallery__link" href="${preview}">
         <img class="gallery__image" 
-        src="${preview}"
+        src="${original}"
         data-source="${original}"
         alt "${description}" 
         >
