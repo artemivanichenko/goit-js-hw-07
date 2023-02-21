@@ -1,9 +1,3 @@
-// import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
-
-// Change code below this line
-
-// console.log(galleryItems);
-
 import { galleryItems } from "./gallery-items.js";
 
 const createGallerycontainer = document.querySelector(".gallery");
@@ -21,34 +15,20 @@ function createGalleryForms(galleryItems) {
         <img class="gallery__image" 
         src="${preview}"
         data-source="${original}"
-        alt "${description}" 
+        alt="${description}" 
         >
         </a>
       </div>`;
     })
     .join("");
 }
-
 function onGalleryContainerClick(evt) {
   evt.preventDefault();
   if (evt.target.nodeName !== "IMG") {
     return;
   }
-
-  // const instance = basicLightbox.create(`
-  //     <img src="${evt.target.src}">
-  // `);
-
-  //   instance.show(evt);
-
-  //   document.addEventListener("keydown", (evt) => {
-  //     if (evt.key === "Escape") {
-  //       instance.close();
-  //     }
-  //   });
 }
-
 const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
-  captionData: "alt",
+  captionsData: "alt",
 });
