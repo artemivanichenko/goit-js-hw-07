@@ -22,12 +22,14 @@ function createGalleryForms(galleryItems) {
     })
     .join("");
 }
+
 function onGalleryContainerClick(evt) {
   evt.preventDefault();
   if (evt.target.nodeName !== "IMG") {
     return;
   }
 }
+
 const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
   captionsData: "alt",
